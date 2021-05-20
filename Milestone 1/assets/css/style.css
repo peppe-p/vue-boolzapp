@@ -1,0 +1,82 @@
+/* ############################### */
+/* ####### GENERAL CLASSES ####### */
+/* ############################### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+/* ############################### */
+/* ####### UTILITY CLASSES ####### */
+/* ############################### */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.showed {
+    display: flex !important;
+}
+.none {
+    display: none !important;
+}
+
+.d_flex {
+    display: flex;
+}
+.justify_center {
+    justify-content: center;
+}
+.align_center {
+    align-items: center;
+}
+.f_col {
+    flex-direction: column;
+}
+.f_around {
+    justify-content: space-around;
+}
+.f_between {
+    justify-content: space-between;
+}
+
+
+
+/* ######################################## */
+/* ####### COMMON HTML-CSS SELECTOR ####### */
+/* ######################################## */
+#root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 90%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contactPanel {
+    background-color: white;
+    width: 30%;
+    height: 100%;
+}
+.messagePanel {
+    background-color: wheat;
+    width: 70%;
+    height: 100%;
+}
