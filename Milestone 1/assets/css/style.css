@@ -186,7 +186,14 @@ i:hover {
     background-color: #eaeaea;
     display: flex;
     align-items: center;
+    padding: 10px 20px;
 }
+.contact > * {
+    padding: 0 10px;
+}
+
+
+
 /* ###################################### */
 /* ####### PANNELLO CHAT (destra) ####### */
 /* ###################################### */
@@ -194,6 +201,8 @@ i:hover {
     background-color: wheat;
     width: 65%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .messagePanel > div {
@@ -202,5 +211,45 @@ i:hover {
 
 .contactInfo {
     height: 100px;
-    background-color: green;
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactInfo > * {
+    padding: 0 10px;
+}
+
+.contactInfoMessage {
+    display: flex;
+    align-items: center;
+}
+.contactInfoMessage > * {
+    padding: 0 10px;
+}
+
+
+
+.chat {
+    background-image: url("../img/mine.jpg");
+    height: 100%;
+}
+
+
+.urMessage {
+    height: 80px;
+    background-color: #eaeaea;
+    padding: 10px 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.urMessage > input {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.urMessage > i:last-child {
+    color:dimgray;
 }
