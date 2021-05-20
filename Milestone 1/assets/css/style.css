@@ -14,9 +14,22 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h2 {
-    font-weight: 400;
-    margin: 5px;
+h2,h3,h4,h5 {
+    font-weight: 300;
+}
+
+a {
+    color: gray;
+}
+
+input[type*="text"] {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+input[type*="text"]:focus-visible {
+    outline: none;
 }
 
 /* ############################### */
@@ -83,13 +96,32 @@ i  {
 i:hover {
     color: lightgray;
 }
+.photo {
+    border-radius: 50%;
+    height: 70px;
+}
+
+.whiteCircle {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whiteCircle > i {
+    font-size: 2rem;
+    color: skyblue;
+}
+
 
 /* ############################################ */
 /* ####### PANNELLO CONTATTI (sinistra) ####### */
 /* ############################################ */
 .contactPanel {
     background-color: white;
-    width: 30%;
+    width: 35%;
     height: 100%;
 }
 .contactPanel > div {
@@ -98,32 +130,69 @@ i:hover {
 
 .myUser {
     height: 100px;
-    background-color: darkgoldenrod;
+    background-color: #eaeaea;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 .myInfo {
+    padding-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 50px;
 }
-#myPhoto {
-    border-radius: 50%;
-    height: 80px;
+.myInfo h2 {
+    margin-left: 10px;
 }
 .myIcons {
-    margin: 0px 50px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
+.notifyDesktop {
+    height: 100px;
+    background-color:skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.notifyDesktop > * {
+    margin: 0px 10px;
+}
+
+
+
+.searchContainer {
+    padding: 10px;
+    background-color: #eaeaea;
+}
+.whiteDiv {
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center
+}
+.searchContainer i {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+
+
+.contact {
+    height: 85px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+}
 /* ###################################### */
 /* ####### PANNELLO CHAT (destra) ####### */
 /* ###################################### */
 .messagePanel {
     background-color: wheat;
-    width: 70%;
+    width: 65%;
     height: 100%;
 }
 

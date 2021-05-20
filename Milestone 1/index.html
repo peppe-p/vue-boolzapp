@@ -24,7 +24,7 @@
                 <div class="myUser">
                     <!-- 1 container nella lista contatti con mie info -->
                     <div class="myInfo">
-                        <img id="myPhoto" src="./assets/img/avatar_io.jpg" alt="">
+                        <img class="photo" src="./assets/img/avatar_io.jpg" alt="">
                         <h2>Nome Utente</h2>
                     </div>
                     <div class="myIcons">
@@ -36,15 +36,31 @@
 
                 <div class="notifyDesktop">
                     <!-- container blu con notifiche -->
+                    <div class="whiteCircle">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="notifyText">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
                 </div>
 
                 <div class="searchContainer">
                     <!-- container con barra di ricerca -->
+                    <div class="whiteDiv">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                    </div>
                 </div>
 
                 <div class="contactList">
                     <div class="contact">
                         <!-- container che si dovrà generare per ogni contatto -->
+                        <img class="photo" src="./assets/img/avatar_1.jpg" alt="">
+                        <div class="contactShowcase">
+                            <h2>Nome Utente</h2>
+                            <h4>Anteprima messaggio</h4>
+                        </div>
                     </div>
                 </div>
             </div>
