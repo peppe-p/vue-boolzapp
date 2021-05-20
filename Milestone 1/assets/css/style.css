@@ -11,9 +11,13 @@ body {
     background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
 }
 
-
+h2 {
+    font-weight: 400;
+    margin: 5px;
+}
 
 /* ############################### */
 /* ####### UTILITY CLASSES ####### */
@@ -63,20 +67,71 @@ body {
     align-items: center;
 }
 .main {
-    height: 90%;
+    height: 85%;
     width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
+i  {
+    color: #b1b1b1;
+    font-size: 1.5rem;
+    margin: 2px 10px;
+    cursor: pointer;
+}
+i:hover {
+    color: lightgray;
+}
+
+/* ############################################ */
+/* ####### PANNELLO CONTATTI (sinistra) ####### */
+/* ############################################ */
 .contactPanel {
     background-color: white;
     width: 30%;
     height: 100%;
 }
+.contactPanel > div {
+    width: 100%;
+}
+
+.myUser {
+    height: 100px;
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.myInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 50px;
+}
+#myPhoto {
+    border-radius: 50%;
+    height: 80px;
+}
+.myIcons {
+    margin: 0px 50px;
+}
+
+
+/* ###################################### */
+/* ####### PANNELLO CHAT (destra) ####### */
+/* ###################################### */
 .messagePanel {
     background-color: wheat;
     width: 70%;
     height: 100%;
+}
+
+.messagePanel > div {
+    width: 100%;
+}
+
+.contactInfo {
+    height: 100px;
+    background-color: green;
 }
