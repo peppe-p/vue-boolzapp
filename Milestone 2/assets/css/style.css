@@ -125,6 +125,7 @@ i:hover {
 
 
 
+
 /* ############################################ */
 /* ####### PANNELLO CONTATTI (sinistra) ####### */
 /* ############################################ */
@@ -243,10 +244,39 @@ i:hover {
 .chat {
     background-image: url("../img/mine.jpg");
     height: 100%;
+    padding: 50px;
+    overflow: auto;
+    flex-direction: column;
+}
+.sentMsg {
+    background-color: #d5f9ba;
+    text-align: right;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.sentMsgPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
+.receivedMsg{
+    background-color: white;
+    text-align: left;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.receivedMsgPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-.urMessage {
+.textContainer {
     height: 80px;
     background-color: #eaeaea;
     padding: 10px 10px;
@@ -254,11 +284,11 @@ i:hover {
     justify-content:space-around;
     align-items: center;
 }
-.urMessage > input {
+.textContainer > input {
     background-color: white;
     padding: 10px;
     border-radius: 5px;
 }
-.urMessage > i:last-child {
+.textContainer > i:last-child {
     color:dimgray;
 }
