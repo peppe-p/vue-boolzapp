@@ -1,0 +1,302 @@
+/* ############################### */
+/* ####### GENERAL CLASSES ####### */
+/* ############################### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 100px, rgba(0,150,136,1) 100px);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2,h3,h4,h5 {
+    font-weight: 300;
+}
+
+a {
+    color: gray;
+}
+
+input[type*="text"] {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+input[type*="text"]:focus-visible {
+    outline: none;
+}
+
+/* ############################### */
+/* ####### UTILITY CLASSES ####### */
+/* ############################### */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.showed {
+    display: flex !important;
+}
+.none {
+    display: none !important;
+}
+
+.d_flex {
+    display: flex;
+}
+.justify_center {
+    justify-content: center;
+}
+.align_center {
+    align-items: center;
+}
+.f_col {
+    flex-direction: column;
+}
+.f_around {
+    justify-content: space-around;
+}
+.f_between {
+    justify-content: space-between;
+}
+
+
+
+/* ######################################## */
+/* ####### COMMON HTML-CSS SELECTOR ####### */
+/* ######################################## */
+#root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 85%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px #00000026;
+}
+
+i  {
+    color: #b1b1b1;
+    font-size: 1.5rem;
+    margin: 2px 10px;
+    cursor: pointer;
+}
+i:hover {
+    color: lightgray;
+}
+.photo {
+    border-radius: 50%;
+    height: 70px;
+}
+
+.whiteCircle {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.whiteCircle > i {
+    font-size: 2rem;
+    color: skyblue;
+}
+
+.selected {
+    background-color: #eaeaea !important;
+}
+
+
+
+
+
+
+
+/* ############################################ */
+/* ####### PANNELLO CONTATTI (sinistra) ####### */
+/* ############################################ */
+.contactPanel {
+    background-color: white;
+    width: 35%;
+    height: 100%;
+}
+.contactPanel > div {
+    width: 100%;
+}
+
+.myUser {
+    height: 100px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.myInfo {
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myInfo h2 {
+    margin-left: 10px;
+}
+.myIcons {
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.notifyDesktop {
+    height: 100px;
+    background-color:skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.notifyDesktop > * {
+    margin: 0px 10px;
+}
+
+
+
+.searchContainer {
+    padding: 10px;
+    background-color: #eaeaea;
+}
+.whiteDiv {
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center
+}
+.searchContainer i {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+
+
+.contact {
+    height: 85px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.contact > * {
+    padding: 0 10px;
+}
+
+
+
+/* ###################################### */
+/* ####### PANNELLO CHAT (destra) ####### */
+/* ###################################### */
+.messagePanel {
+    background-color: wheat;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.messagePanel > div {
+    width: 100%;
+}
+
+.contactInfo {
+    height: 100px;
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactInfo > * {
+    padding: 0 10px;
+}
+
+.contactInfoMessage {
+    display: flex;
+    align-items: center;
+}
+.contactInfoMessage > * {
+    padding: 0 10px;
+}
+
+
+
+.chat {
+    background-image: url("../img/mine.jpg");
+    height: 100%;
+    padding: 50px;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    flex-direction: column;
+}
+.sentMsg {
+    background-color: #d5f9ba;
+    text-align: right;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.sentMsgPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.receivedMsg{
+    background-color: white;
+    text-align: left;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.receivedMsgPosition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timing{
+    font-size: 0.8rem;
+    color: #00000075;
+}
+
+
+
+.textContainer {
+    height: 80px;
+    background-color: #eaeaea;
+    padding: 10px 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.textContainer > input {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.textContainer > i:last-child {
+    color:dimgray;
+}
