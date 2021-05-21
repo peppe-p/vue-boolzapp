@@ -96,6 +96,7 @@
                         :class="message.status == 'sent' ? 'sentMsgPosition' : 'receivedMsgPosition' ">
                         <div class="msg" :class="message.status == 'sent' ? 'sentMsg' : 'receivedMsg' ">
                             <p>{{message.text}}</p>
+                            <span class="timing">{{message.date}}</span>
                         </div>
                     </div>
                 </div>

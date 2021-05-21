@@ -245,7 +245,8 @@ i:hover {
     background-image: url("../img/mine.jpg");
     height: 100%;
     padding: 50px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y:scroll;
     flex-direction: column;
 }
 .sentMsg {
@@ -275,6 +276,13 @@ i:hover {
     flex-direction: column;
     align-items: flex-start;
 }
+
+.timing{
+    font-size: 0.8rem;
+    color: #00000075;
+}
+
+
 
 .textContainer {
     height: 80px;
