@@ -25,7 +25,7 @@
                     <!-- 1 container nella lista contatti con mie info -->
                     <div class="myInfo">
                         <img class="photo" src="./assets/img/avatar_io.jpg" alt="">
-                        <h2>Nome Utente</h2>
+                        <h2>Me</h2>
                     </div>
                     <div class="myIcons">
                         <i class="fas fa-circle-notch"></i>
@@ -74,11 +74,12 @@
             <div class="messagePanel">
                 <div class="contactInfo">
                     <!-- container con le info del contatto selezionato -->
-                    <div class="contactInfoMessage">
-                        <img class="photo" src="./assets/img/avatar_1.jpg" alt="">
+                    <div class="contactInfoMessage" v-for="(contact, i) in contacts"
+                        :class="index == i ? 'showed' : 'none' ">
+                        <img class="photo" :src="'./assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="contactShowcase">
-                            <h2>Nome Utente</h2>
-                            <h4>Visualizzare ultimo messaggio</h4>
+                            <h2>{{contact.name}}</h2>
+                            <h4>{{contact.state}}</h4>
                         </div>
                     </div>
 
@@ -89,11 +90,17 @@
                     </div>
                 </div>
 
-                <div class="chat">
+                <div class="chat" v-for="(contact, i) in contacts" :class="index == i ? 'showed' : 'none' ">
                     <!-- container principale con la chat del contatto -->
+                    <div class="chatMessage" v-for="(message, i) in contact.messages"
+                        :class="message.status == 'sent' ? 'sentMsgPosition' : 'receivedMsgPosition' ">
+                        <div class="msg" :class="message.status == 'sent' ? 'sentMsg' : 'receivedMsg' ">
+                            <p>{{message.text}}</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="urMessage">
+                <div class="textContainer">
                     <!-- container input invio messaggio -->
                     <i class="far fa-smile"></i>
                     <input type="text" name="urMessage" id="urMessage" placeholder="Scrivi qui il tuo messaggio...">

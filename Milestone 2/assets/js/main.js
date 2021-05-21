@@ -11,6 +11,12 @@ const app = new Vue({
     el: "#root",
     data: {
         index: 0,
+        time: function () {
+            let ora = "0" + parseInt(Math.random() * 24);
+            let minuti = parseInt(Math.random() * 59);
+            let orario = ora + ":" + minuti
+            return orario;
+        },
         contacts: [
             {
                 name: 'Michele',
@@ -31,8 +37,9 @@ const app = new Vue({
                         date: '10/01/2020 16:15:22',
                         text: 'Tutto fatto!',
                         status: 'received'
-                    }
+                    },
                 ],
+                state: "Online",
             },
             {
                 name: 'Fabio',
@@ -55,6 +62,7 @@ const app = new Vue({
                         status: 'sent'
                     }
                 ],
+                state: "Online",
             },
 
             {
@@ -78,6 +86,7 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
+                state: "Online",
             },
             {
                 name: 'Luisa',
@@ -95,6 +104,7 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
+                state: "Online",
             },
         ],
 
