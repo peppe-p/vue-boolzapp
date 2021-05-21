@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 85%, rgba(0,150,136,1) 100%);
+    background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 100px, rgba(0,150,136,1) 100px);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
@@ -85,6 +85,7 @@ input[type*="text"]:focus-visible {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 10px #00000026;
 }
 
 i  {

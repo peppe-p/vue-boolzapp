@@ -54,9 +54,9 @@
                 </div>
 
                 <div class="contactList">
-                    <div class="contact">
+                    <div class="contact" v-for="(contact, i) in contacts">
                         <!-- container che si dovrà generare per ogni contatto -->
-                        <img class="photo" src="./assets/img/avatar_1.jpg" alt="">
+                        <img class="photo" :src="'./assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="contactShowcase">
                             <h2>Nome Utente</h2>
                             <h4>Anteprima messaggio</h4>
@@ -64,6 +64,8 @@
                     </div>
                 </div>
             </div>
+
+
 
 
 
