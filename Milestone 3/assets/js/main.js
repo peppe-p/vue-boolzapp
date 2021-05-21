@@ -1,10 +1,10 @@
 /* 
-Milestone 2
-●Visualizzazione dinamica dei messaggi:tramite la direttiva v-for,
-visualizzare tutti imessaggi relativi al contatto attivo all’interno del
-pannello della conversazione
+Milestone 3
+●Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter”
+il testo viene aggiunto al thread sopra, come messaggio verde
 
-●Click sul contattomostra la conversazione del contatto cliccato
+●Risposta dall’interlocutore:ad ogni inserimento diun messaggio, l’utente riceverà
+un “ok” come risposta, che apparirà dopo 1 secondo
 */
 
 const app = new Vue({
@@ -16,6 +16,17 @@ const app = new Vue({
             let minuti = parseInt(Math.random() * 59);
             let orario = ora + ":" + minuti
             return orario;
+        },
+        textMessage: "",
+        timeLive: function () {
+            let d = new Date();
+            let giorno = d.getDate();
+            let mese = d.getMonth();
+            let anno = d.getFullYear();
+            let ore = d.getHours();
+            let minuti = d.getMinutes();
+            let dataCompleta = `${giorno}/${mese}/${anno}  ${ore}:${minuti}`;
+            return dataCompleta;
         },
         contacts: [
             {
@@ -113,5 +124,23 @@ const app = new Vue({
         selectedContact(i) {
             return this.index = i;
         },
+
+        sendMessage(i) {
+            this.contacts[i].messages.push(
+                {
+                    date: this.timeLive(),
+                    text: this.textMessage,
+                    status: 'sent',
+                },
+            )
+        },
+    },
+
+    mounted() {
+        window.addEventListener("keydown", (element) => {
+            if (element.key == "Enter") {
+                this.sendMessage(this.index)
+            }
+        });
     },
 });

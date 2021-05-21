@@ -103,7 +103,8 @@
                 <div class="textContainer">
                     <!-- container input invio messaggio -->
                     <i class="far fa-smile"></i>
-                    <input type="text" name="urMessage" id="urMessage" placeholder="Scrivi qui il tuo messaggio...">
+                    <input type="text" id="urMessage" placeholder="Scrivi qui il tuo messaggio..." v-model="textMessage"
+                        v-for="(contact, i) in contacts" :class="index == i ? 'showed' : 'none' ">
                     <i class="fas fa-microphone"></i>
                 </div>
             </div>
