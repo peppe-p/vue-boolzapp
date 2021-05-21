@@ -132,7 +132,17 @@ const app = new Vue({
                     text: this.textMessage,
                     status: 'sent',
                 },
-            )
+            );
+            this.textMessage = "";
+            setTimeout(() => {
+                this.contacts[i].messages.push(
+                    {
+                        date: this.timeLive(),
+                        text: "Ok",
+                        status: 'received',
+                    },
+                );
+            }, 1000);
         },
     },
 
