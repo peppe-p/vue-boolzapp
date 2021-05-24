@@ -54,9 +54,9 @@
                 </div>
 
                 <div class="contactList">
+                    <!-- container che si dovrà generare per ogni contatto -->
                     <div class="contact" v-for="(contact, i) in contacts" @click="selectedContact(i)"
-                        :class="index == i ? 'selected' : '' ">
-                        <!-- container che si dovrà generare per ogni contatto -->
+                        :class="index == i ? 'selected' : '' " v-if="contact.visible == true">
                         <img class="photo" :src="'./assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="contactShowcase">
                             <h2>{{contact.name}}</h2>

@@ -143,6 +143,7 @@ const app = new Vue({
                 );
             }, 1000);
         },
+
     },
 
     mounted() {
@@ -151,6 +152,24 @@ const app = new Vue({
                 this.sendMessage(this.index)
             }
         });
-
     },
+
+    watch: {
+        textSearch: function () {
+            this.contacts.forEach(contact => {
+                let name = contact.name.toLowerCase();
+                let ricerca = this.textSearch;
+                if (ricerca == "") {
+                    contact.visible = true;
+                    console.log("tutto cancellato");
+                } else if (name.includes(ricerca)) {
+                    contact.visible = true;
+                    console.log(contact + " reso visibile");
+                } else {
+                    contact.visible = false;
+                    console.log(contact + " NONE");
+                }
+            });
+        },
+    }
 });
