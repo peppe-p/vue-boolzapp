@@ -161,13 +161,10 @@ const app = new Vue({
                 let ricerca = this.textSearch;
                 if (ricerca == "") {
                     contact.visible = true;
-                    console.log("tutto cancellato");
-                } else if (name.includes(ricerca)) {
+                } else if (name.includes(ricerca.toLowerCase())) {
                     contact.visible = true;
-                    console.log(contact + " reso visibile");
                 } else {
                     contact.visible = false;
-                    console.log(contact + " NONE");
                 }
             });
         },

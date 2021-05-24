@@ -8,7 +8,9 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(216,219,214,1) 0%, rgba(216,219,214,1) 85%, rgba(0,150,136,1) 100px, rgba(0,150,136,1) 100px);
+    background-color: #d5dbd9;
+    background-image: linear-gradient(#009688 0%, #009688 100%);
+    background-size: 100vw 100px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
@@ -67,7 +69,11 @@ input[type*="text"]:focus-visible {
     justify-content: space-between;
 }
 
-
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* ######################################## */
 /* ####### COMMON HTML-CSS SELECTOR ####### */
@@ -75,13 +81,14 @@ input[type*="text"]:focus-visible {
 #root {
     height: 100vh;
     width: 100vw;
+    padding: 30px 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .main {
-    height: 85%;
-    width: 75%;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,8 +110,8 @@ i:hover {
 }
 
 .whiteCircle {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -112,7 +119,7 @@ i:hover {
     align-items: center;
 }
 .whiteCircle > i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: skyblue;
 }
 
@@ -138,7 +145,7 @@ i:hover {
 }
 
 .myUser {
-    height: 100px;
+    height: 120px;
     background-color: #eaeaea;
     display: flex;
     justify-content:space-between;
@@ -161,11 +168,11 @@ i:hover {
 
 
 .notifyDesktop {
-    height: 100px;
+    height: 120px;
     background-color:skyblue;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 .notifyDesktop > * {
     margin: 0px 10px;
@@ -246,7 +253,7 @@ i:hover {
 .chat {
     background-image: url("../img/mine.jpg");
     height: 100%;
-    padding: 50px;
+    padding: 20px 50px;
     overflow-x: hidden;
     overflow-y:scroll;
     flex-direction: column;
