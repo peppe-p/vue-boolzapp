@@ -98,6 +98,13 @@
                     <div class="chatMessage" v-for="(message, i) in contact.messages"
                         :class="message.status == 'sent' ? 'sentMsgPosition' : 'receivedMsgPosition' ">
                         <div class="msg" :class="message.status == 'sent' ? 'sentMsg' : 'receivedMsg' ">
+                            <i class="fas fa-angle-down" :class="message.status == 'sent' ? 'menuIconD' : 'menuIconS'">
+                                <div class="msgOption"
+                                    :class="message.status == 'sent' ? 'msgOptionSent' : 'msgOptionReceived'">
+                                    <h6>Message Info</h6>
+                                    <h6>Delete Message</h6>
+                                </div>
+                            </i>
                             <p>{{message.text}}</p>
                             <span class="timing">{{message.date}}</span>
                         </div>

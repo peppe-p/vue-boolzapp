@@ -131,7 +131,52 @@ i:hover {
     background-color: #eaeaea !important;
 }
 
+.menuIconD {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    background-color: #d5f9bae6;
+}
+.menuIconS {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    background-color: white;
+}
 
+.msgOption {
+    display: none;
+    position: absolute;
+    top: 20px;
+    color: black;
+    background-color: #fff;
+    width: 200px;
+}
+.msgOptionSent {
+    right: 0;
+}
+.msgOptionReceived {
+    left: 0;
+    text-align: left;
+}
+.msgOption h6 {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+.msgOption h6:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+.menuIconD:hover .msgOption, .menuIconS:hover .msgOption {
+    display: block;
+}
 
 
 
@@ -276,13 +321,17 @@ i:hover {
 }
 .sentMsg {
     background-color: #d5f9ba;
-    text-align: right;
+    text-align: left;
     padding: 10px;
     align-self: flex-end;
     border-radius: 5px;
     margin: 5px 0;
-    max-width: 370px;
+    max-width: 380px;
+    min-width: 150px;
     position: relative;
+}
+.sentMsg:hover .menuIconD {
+    display: block;
 }
 .sentMsg::after {
     content: '\25C6';
@@ -300,13 +349,17 @@ i:hover {
 
 .receivedMsg{
     background-color: white;
-    text-align: left;
+    text-align: right;
     padding: 10px;
     align-self: flex-start;
     border-radius: 5px;
     margin: 5px 0;
-    max-width: 370px;
+    max-width: 380px;
+    min-width: 150px;
     position: relative;
+}
+.receivedMsg:hover .menuIconS {
+    display: block;
 }
 .receivedMsg::after {
     content: '\25C6';
