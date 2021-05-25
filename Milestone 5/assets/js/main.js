@@ -11,7 +11,6 @@ const app = new Vue({
     data: {
         index: 0,
         preview: this.lastMsg,
-        hover: false,
         time: function () {
             let ora = "0" + parseInt(Math.random() * 24);
             let minuti = parseInt(Math.random() * 59);
@@ -148,8 +147,8 @@ const app = new Vue({
             }, 1000);
         },
 
-        prova() {
-            console.log("ciao funziona");
+        deleteMsg(i) {
+            this.contacts[this.index].messages.splice(i, 1);
         }
     },
 

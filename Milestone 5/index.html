@@ -102,7 +102,7 @@
                                 <div class="msgOption"
                                     :class="message.status == 'sent' ? 'msgOptionSent' : 'msgOptionReceived'">
                                     <h6>Message Info</h6>
-                                    <h6>Delete Message</h6>
+                                    <h6 @click="deleteMsg(i)">Delete Message</h6>
                                 </div>
                             </i>
                             <p>{{message.text}}</p>
