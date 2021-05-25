@@ -60,7 +60,10 @@
                         <img class="photo" :src="'./assets/img/avatar'+ contact.avatar +'.jpg'" alt="">
                         <div class="contactShowcase">
                             <h2>{{contact.name}}</h2>
-                            <h4>Anteprima messaggio</h4>
+                            <div class="previewContainer">
+                                <h4 v-for="(msg, i) in contact.messages" v-if="msg, i == contact.messages.length - 1">
+                                    {{msg.text}}</h4>
+                            </div>
                         </div>
                     </div>
                 </div>

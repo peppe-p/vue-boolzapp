@@ -9,6 +9,7 @@ const app = new Vue({
     el: "#root",
     data: {
         index: 0,
+        preview: this.lastMsg,
         time: function () {
             let ora = "0" + parseInt(Math.random() * 24);
             let minuti = parseInt(Math.random() * 59);
@@ -144,14 +145,25 @@ const app = new Vue({
             }, 1000);
         },
 
+
+        /* lastMsg() {
+            this.contacts.forEach((contact) => {
+                let lastIndex = (contact.messages.length);
+                let lastMessage = contact.messages[lastIndex];
+                let msgContent = lastMessage.text;
+                return msgContent;
+            })
+        }, */
+
     },
 
     mounted() {
         window.addEventListener("keydown", (element) => {
             if (element.key == "Enter") {
-                this.sendMessage(this.index)
+                this.sendMessage(this.index);
             }
         });
+
     },
 
     watch: {
@@ -168,5 +180,6 @@ const app = new Vue({
                 }
             });
         },
+
     }
 });

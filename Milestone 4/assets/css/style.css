@@ -20,6 +20,11 @@ h2,h3,h4,h5 {
     font-weight: 300;
 }
 
+h4 {
+    opacity: 45%;
+    display: inline;
+}
+
 a {
     color: gray;
 }
@@ -213,6 +218,13 @@ i:hover {
 }
 .contact > * {
     padding: 0 10px;
+}
+.previewContainer {
+    min-width: 20px;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
